@@ -1,0 +1,36 @@
+@use "../../styles/partials/typography" as *;
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 3.125rem;
+    background: #999999;
+    border-bottom: solid 1px;
+    z-index: 10;
+    font-family: 'Avenir';
+
+    &__logo {
+        display: flex;
+        align-items: center;
+        font-size: 2rem;
+    }
+
+    &__links {
+        display: flex;
+        align-items: center;
+    a {
+      text-decoration: none;
+      font-weight:600;
+    }
+
+        &--left {
+            padding-left: 1.25rem;
+            align-self: left;
+        }
+        
+        &--right {
+            padding-right: 1.25rem;
+            align-self: right;
+        }
+    }
+}
