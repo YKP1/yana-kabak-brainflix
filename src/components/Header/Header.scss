@@ -8,7 +8,8 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: flex-start;
+  align-content: space-between;
+  align-items: flex-start;
   font-family: "Avenir";
 
   &__left {
@@ -22,6 +23,18 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: space-between;
+
+    .header__search{
+        border-radius: 0.2rem;
+        border-color: $Silver;
+        background-color: $Alabaster;
+        max-height: 4rem; //height do not adjust______________________________
+        resize: none;
+        border-width: thin;
+
+
+    }
   }
 
   &__image {
