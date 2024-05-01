@@ -4,60 +4,61 @@
 @use "../../styles/partials/colors" as *;
 
 .header {
-  //does not move to centre top______________________________
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
   align-content: space-between;
-  align-items: flex-start;
+  align-items: center;
   font-family: "Avenir";
+  width: 100%;
 
-  &__left {
+  &__search {
     display: flex;
-    justify-content: center;
-    max-height: 1.5625rem;
-    max-width: 7.5rem;
-  }
-
-  &__mid {
-    display: flex;
-    flex-direction: row;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    width: 100%;
 
-    .header__search{
-        border-radius: 0.2rem;
-        border-color: $Silver;
-        background-color: $Alabaster;
-        max-height: 4rem; //height do not adjust______________________________
-        resize: none;
-        border-width: thin;
-
-
+    &--textbox {
+      border-radius: 0.25rem;
+      background-color: $Alabaster;
+      background-image: url(/src/assets/Icons/search.svg);
+      background-repeat: no-repeat;
+      background-position: 0;
+      background-position-x: 0.5rem;
+      height: 2.25rem;
+      resize: none;
+      border: 1px solid $Mercury;
+      border-width: thin;
+      padding: 0.5rem 0.5rem 0.5rem 2rem;
     }
+
   }
 
-  &__image {
-    width: 2.25rem;
-    height: 2.25rem;
+  .header__image {//is nesting correct?_________________________________________________
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
     object-fit: cover;
   }
 
-  &__right {
-    display: flex;
+  .header__button { //is nesting correct?_________________________________________________
     align-items: center;
-
-    .header__button {
-      //is nesting correct?_________________________________________________
-      max-height: 6rem; //height do not adjust______________________________
-      min-width: 13rem;
-      padding: 0.2rem 2rem;
-      border-radius: 0.25rem;
-      font-weight: 700;
-      font-size: 0.75rem;
-      color: $White;
-      background-color: $BrainFlix-Blue;
-    }
+    height: 2.25rem;
+    min-width: 13rem;
+    padding: 0.2rem 2rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: $White;
+    background-color: $BrainFlix-Blue;
+    background-image: url(/src/assets/Icons/upload.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: 0;
+    background-position-x: .5rem;
   }
 }

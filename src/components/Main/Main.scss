@@ -1,0 +1,11 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
+
+h1{
+color: $BrainFlix-Black;
+font-size: 24px;
+line-height: 32px;
+font-weight: 700;
+}

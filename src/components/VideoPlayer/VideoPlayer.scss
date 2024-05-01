@@ -1,0 +1,10 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
+
+.videoplayer{
+    margin-top:1rem; //_____________________in the mockup it should be 1rem padding, how?
+    background-color: $BrainFlix-DarkBlack;
+    height: 10rem;
+}
