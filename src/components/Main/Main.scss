@@ -3,9 +3,64 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/colors" as *;
 
-h1{
-color: $BrainFlix-Black;
-font-size: 24px;
-line-height: 32px;
-font-weight: 700;
+h1 {
+  color: $BrainFlix-Black;
+  font-size: 1.5rem;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.main {
+  padding: 1rem;
+}
+
+.main__section {
+  display: flex;
+  justify-content: flex-start;
+  border-top: 2px solid $Mercury;
+  border-bottom: 1px solid $Mercury;
+  align-items: baseline;
+
+  &--body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 1rem;
+    line-height: 1rem;
+    font-size: 0.8125rem;
+    padding-right: 1.5rem;
+  }
+
+  &--name {
+    font-weight: 700;
+    margin-bottom: 0;
+  }
+
+  &--date {
+    color: $Mercury;
+  }
+
+  &--views {
+    display: flex;
+    justify-items: flex-start;
+    color: $Mercury;
+    padding-right: 2.75rem;
+    align-items: center;
+    color: $Silver;
+  }
+
+  &--likes {
+    display: flex;
+    justify-items: flex-start;
+    color: $Mercury;
+    padding-right: 2.75rem;
+    align-items: center;
+    color: $Silver;
+  }
+}
+
+.main__subsection{
+    font-size: 0.8125rem;
+    color:$BrainFlix-Black;
+
 }

@@ -14,3 +14,10 @@ body {
   font-family: 'Avenir';
   margin: 0 auto;
 }
+
+h1 {
+  color: $BrainFlix-Black;
+  font-size: 1.5rem;
+  line-height: 32px;
+  font-weight: 700;
+}
