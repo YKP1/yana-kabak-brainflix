@@ -1,36 +1,50 @@
 @use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
 
 .header {
+  //does not move to centre top______________________________
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: flex-start;
+  font-family: "Avenir";
+
+  &__left {
     display: flex;
-    justify-content: space-between;
-    height: 3.125rem;
-    background: #999999;
-    border-bottom: solid 1px;
-    z-index: 10;
-    font-family: 'Avenir';
+    justify-content: center;
+    max-height: 1.5625rem;
+    max-width: 7.5rem;
+  }
 
-    &__logo {
-        display: flex;
-        align-items: center;
-        font-size: 2rem;
-    }
+  &__mid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
 
-    &__links {
-        display: flex;
-        align-items: center;
-    a {
-      text-decoration: none;
-      font-weight:600;
-    }
+  &__image {
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    object-fit: cover;
+  }
 
-        &--left {
-            padding-left: 1.25rem;
-            align-self: left;
-        }
-        
-        &--right {
-            padding-right: 1.25rem;
-            align-self: right;
-        }
+  &__right {
+    display: flex;
+    align-items: center;
+
+    .header__button {
+      //is nesting correct?_________________________________________________
+      max-height: 6rem; //height do not adjust______________________________
+      min-width: 13rem;
+      padding: 0.2rem 2rem;
+      border-radius: 0.25rem;
+      font-weight: 700;
+      font-size: 0.75rem;
+      color: $White;
+      background-color: $BrainFlix-Blue;
     }
+  }
 }

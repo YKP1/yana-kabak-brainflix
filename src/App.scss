@@ -1,3 +1,16 @@
 @use "./styles/partials/typography" as *;
+@use "./styles/partials/variables" as *;
+@use "./styles/partials/mixin" as *;
+@use "./styles/partials/colors" as *;
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+html,
+body {
+  font-family: 'Avenir';
+  margin: 0 auto;
+}
