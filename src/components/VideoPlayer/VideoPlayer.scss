@@ -3,8 +3,13 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/colors" as *;
 
-.videoplayer{
-    margin-top:1rem; //_____________________in the mockup it should be 1rem padding, how?
-    background-color: $BrainFlix-DarkBlack;
-    height: 10rem;
+.videoplayer {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.video-player {
+  height: 10rem;
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
 }
