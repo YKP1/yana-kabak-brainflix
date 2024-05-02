@@ -12,7 +12,6 @@ export default function Header() {
         <img src={HeaderImage} alt="profile picture" className="header__image"/>
         <button className="header__button">UPLOAD</button>
       </div>
-      
     </header>
   );
 }
