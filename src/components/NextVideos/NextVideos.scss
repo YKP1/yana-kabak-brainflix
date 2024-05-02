@@ -2,3 +2,27 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/colors" as *;
+
+.videoslist {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+  border: 1px solid GREEN;
+
+  &__image {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+  }
+
+  &__container {
+    border: 1px solid red;
+    padding-top: 1rem;
+    flex-direction: row;
+    display: flex;
+
+    &--video{
+        border: 1px solid grey;
+    }
+  }
+}
