@@ -14,6 +14,12 @@
   font-family: "Avenir";
   width: 100%;
 
+  @include tablet {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   &__search {
     display: flex;
     align-items: center;
@@ -21,6 +27,11 @@
     gap: 1rem;
     justify-content: center;
     width: 100%;
+
+    @include tablet {
+      align-items: center;
+      justify-content: flex-end;
+    }
 
     &--textbox {
       border-radius: 0.25rem;
@@ -34,21 +45,31 @@
       border: 1px solid $Mercury;
       border-width: thin;
       padding: 0.5rem 0.5rem 0.5rem 2rem;
-    }
 
+      @include tablet {
+        flex-basis: 25%;
+        flex-grow: 0;
+        order: 1;
+      }
+    }
   }
 
-  .header__image {//is nesting correct?_________________________________________________
+  .header__image {
     width: 2.5rem;
     height: 2.5rem;
     border-radius: 50%;
     object-fit: cover;
+
+    @include tablet {
+      order: 3;
+    }
   }
 
-  .header__button { //is nesting correct?_________________________________________________
+  .header__button {
+    //is nesting correct?_________________________________________________
     align-items: center;
     height: 2.25rem;
-    min-width: 13rem;
+    width: 13rem;
     padding: 0.2rem 2rem;
     border-radius: 0.25rem;
     font-weight: 700;
@@ -60,6 +81,11 @@
     width: 100%;
     border: none;
     background-position: 0;
-    background-position-x: .5rem;
+    background-position-x: 0.5rem;
+
+    @include tablet {
+      order: 2;
+      max-width: 8rem;
+    }
   }
 }
