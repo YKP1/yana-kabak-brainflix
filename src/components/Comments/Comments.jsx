@@ -1,5 +1,4 @@
 import "./Comments.scss";
-// import Comments from "../Comments/Comments";
 
 function Comments({ comments }) {
   return (
