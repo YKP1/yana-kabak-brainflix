@@ -54,10 +54,16 @@
         border: 0.125rem solid $Mercury;
         border-radius: 0.25rem;
         margin-bottom: 1.5rem;
-        font-family: "Avenir";
-        color: black;
+
         resize: none;
         padding-top: 0;
+
+        &::placeholder {
+          font-family: "Avenir";
+          color: $BrainFlix-DarkBlack;
+          padding-top: 0.5rem;
+          padding-left: 0.5rem;
+        }
       }
 
       &--btn {
