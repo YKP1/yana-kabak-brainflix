@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <Header/>
       <VideoPlayer video={selectedVideo} />
       <div className="desktop__1">
         <div className="desktop__2">

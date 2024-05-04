@@ -2,8 +2,6 @@ import "./Main.scss";
 import Views from "../../assets/Icons/views.svg";
 import Likes from "../../assets/Icons/likes.svg";
 
-// import React from 'react';
-// import VideoThumbnail from './VideoThumbnail';
 
 export default function Main({ video }) {
   return (
