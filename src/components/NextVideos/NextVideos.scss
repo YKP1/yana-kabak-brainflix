@@ -9,9 +9,14 @@
   padding-left: 1rem;
   padding-right: 0.5rem;
 
-  &__header{
+  @include tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  &__header {
     text-transform: uppercase;
-    color: #AFAFAF;
+    color: #afafaf;
     font-weight: 600;
     line-height: 1.25rem;
     font-size: 0.8125rem;
@@ -32,6 +37,4 @@
     flex-direction: row;
     display: flex;
   }
-
-
 }
