@@ -6,6 +6,11 @@
 .comments {
   padding: 0rem 1rem;
 
+  @include tablet{
+    padding-left: 2rem;
+    padding-right:2rem;
+  }
+
   &__header {
     font-size: 0.8125rem;
     font-weight: 700;
@@ -45,6 +50,12 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+
+        @include tablet {
+          flex-direction: row;
+          justify-content: space-around;
+          gap: 1rem;
+        }
       }
 
       &__textarea {
@@ -54,9 +65,13 @@
         border: 0.125rem solid $Mercury;
         border-radius: 0.25rem;
         margin-bottom: 1.5rem;
-
         resize: none;
         padding-top: 0;
+
+        @include tablet{
+          height: 2.4rem;
+          resize: none;
+        }
 
         &::placeholder {
           font-family: "Avenir";
@@ -69,7 +84,7 @@
       &--btn {
         align-items: center;
         height: 2.25rem;
-        min-width: 13rem;
+        width: 13rem;
         padding: 0.7rem 2rem;
         border-radius: 0.25rem;
         font-weight: 700;
@@ -82,6 +97,11 @@
         border: none;
         background-position: 0;
         background-position-x: 0.5rem;
+
+        @include tablet {
+          height: 2.5rem;
+          max-width: 9rem;
+        }
       }
     }
   }

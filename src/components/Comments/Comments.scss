@@ -9,6 +9,11 @@
   padding: 0 1rem;
   flex-direction: column;
 
+  @include tablet{
+    padding-left: 2rem;
+    padding-right:2rem;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: row;
