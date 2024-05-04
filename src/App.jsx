@@ -11,7 +11,6 @@ import { useState } from "react";
 console.log(videos);
 
 function App() {
-
   const [selectedVideo, jonny] = useState(videos[0]);
 
   const otherVideos = videos.filter((el) => {
@@ -21,11 +20,17 @@ function App() {
   return (
     <>
       <Header />
-      <VideoPlayer video={selectedVideo}/>
-      <Main video={selectedVideo} />
-      <CommentsForm numberOfComments={selectedVideo.comments.length}/>
-      <Comments comments={selectedVideo.comments} />
-      <NextVideos otherVideos={otherVideos} yana={jonny}/>
+      <VideoPlayer video={selectedVideo} />
+      <div className="desktop__1">
+        <div className="desktop__2">
+          <Main video={selectedVideo} />
+          <CommentsForm numberOfComments={selectedVideo.comments.length} />
+          <Comments comments={selectedVideo.comments} />
+        </div>
+        <div className="desktop__3">
+          <NextVideos otherVideos={otherVideos} yana={jonny} />
+        </div>
+      </div>
     </>
   );
 }
