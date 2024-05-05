@@ -8,8 +8,6 @@ import NextVideos from "./components/NextVideos/NextVideos";
 import videos from "./data/video-details.json";
 import { useState } from "react";
 
-console.log(videos);
-
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 

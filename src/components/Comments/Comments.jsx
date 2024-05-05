@@ -3,9 +3,11 @@ import "./Comments.scss";
 function Comments({ comments }) {
   return (
     <div className="rcomments" id={comments.id}>
+      
       {comments.map((comment) => {
         const date = new Date(comment.timestamp);
         const dateString = date.toLocaleDateString();
+
         return (
           <div className="rcomments__wrapper" key={comment.id}>
             <div className="rcomments__wrapper--left">
