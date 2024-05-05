@@ -11,7 +11,7 @@ import { useState } from "react";
 console.log(videos);
 
 function App() {
-  const [selectedVideo, jonny] = useState(videos[0]);
+  const [selectedVideo, setSelectedVideo] = useState(videos[0]);
 
   const otherVideos = videos.filter((el) => {
     return el.id !== selectedVideo.id;
@@ -28,7 +28,7 @@ function App() {
           <Comments comments={selectedVideo.comments} />
         </div>
         <div className="desktop__3">
-          <NextVideos otherVideos={otherVideos} yana={jonny} />
+          <NextVideos otherVideos={otherVideos} setSelectedVideo={setSelectedVideo} />
         </div>
       </div>
     </>
