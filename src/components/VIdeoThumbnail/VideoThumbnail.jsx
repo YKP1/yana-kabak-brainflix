@@ -1,10 +1,10 @@
 import "./VideoThumbnail.scss";
 
-function VideoThumbnail({ video, eli }) {
+function VideoThumbnail({ video, setSelectedVideo }) {
   return (
     <div
       key={video.id}
-      onClick={() => eli(video)}
+      onClick={() => setSelectedVideo(video)}
       className="videoslist__container"
     >
       <img className="videoslist__image" src={video.image} />
