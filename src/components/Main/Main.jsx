@@ -15,12 +15,12 @@ export default function Main({ video }) {
           </p>
         </div>
         <div className="main__section--body">
-          <div className="section main__section--views">
-            <img src={Views} alt="views icon" />
+          <div className="main__section--views">
+            <img src={Views} alt="views icon" className = "main__section--icon"/>
             <p>{video.views}</p>
           </div>
           <div className="section main__section--likes">
-            <img src={Likes} alt="likes icon"/>
+            <img src={Likes} alt="likes icon" className = "main__section--icon"/>
             <p>{video.likes}</p>
           </div>
         </div>
