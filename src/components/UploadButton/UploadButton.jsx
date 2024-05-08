@@ -1,7 +1,7 @@
-import "./UploadForm.scss";
+import "./UploadButton.scss";
 import { useNavigate } from "react-router-dom";
 
-export const UploadForm = () => {
+export const UploadButton = () => {
     const navigate = useNavigate ();
     const handleSubmit = () => {
         navigate ("page")
