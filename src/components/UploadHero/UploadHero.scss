@@ -1,0 +1,19 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
+
+.uploadhero {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid $Mercury;
+
+  h1 {
+    font-size: 1.8rem;
+    margin-left: 1.6rem;
+  }
+
+  &__hero{
+    margin: 0 1.5rem;
+  }
+}
