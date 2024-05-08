@@ -11,7 +11,7 @@ export default function Header() {
       <div className="header__search">
         <input className="header__search--textbox" placeholder="Search" />
         <img src={HeaderImage} alt="profile picture" className="header__image"/>
-        <Link to = "/upload"> <button className="header__button">UPLOAD</button> </Link>
+        <Link className="header__buttonlink" to = "/upload"> <button className="header__button">UPLOAD</button> </Link>
       </div>
     </header>
   );

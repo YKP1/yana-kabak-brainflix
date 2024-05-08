@@ -4,10 +4,8 @@ import Main from "../../components/Main/Main";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
 import Comments from "../../components/Comments/Comments";
 import NextVideos from "../../components/NextVideos/NextVideos";
-// import Header from "../../components/Header/Header";
-// import { UploadForm } from "../../components/UploadForm/UploadForm";
 
-const Page = ({ selectedVideo, otherVideos, setSelectedVideo }) => {
+const VideoPage = ({ selectedVideo, otherVideos, setSelectedVideo }) => {
   return (
     <>
       <VideoPlayer video={selectedVideo} />
@@ -28,4 +26,4 @@ const Page = ({ selectedVideo, otherVideos, setSelectedVideo }) => {
   );
 };
 
-export default Page;
+export default VideoPage;

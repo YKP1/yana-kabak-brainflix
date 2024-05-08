@@ -72,7 +72,6 @@
   .header__button {
     align-items: center;
     height: 2.25rem;
-    width: 13rem;
     padding: 0.2rem 2rem;
     border-radius: 0.25rem;
     font-weight: 700;
@@ -85,6 +84,10 @@
     border: none;
     background-position: 0;
     background-position-x: 0.5rem;
+  }
+
+  .header__buttonlink{
+    width: 16.5rem;
 
     @include tablet {
       order: 2;
