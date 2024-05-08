@@ -1,10 +1,12 @@
-import "./UploadButton.scss";
-import { useNavigate } from "react-router-dom";
+import { Link } from 'react-router-dom';
+import './UploadButton.scss';
 
-export const UploadButton = () => {
-    const navigate = useNavigate ();
-    const handleSubmit = () => {
-        navigate ("page")
-    };
-    return <button onClick = {handleSubmit} className="header__button">UPLOAD</button>;
-}
+const UploadButton = () => {
+    return (
+        <Link className="header__buttonlink" to="/upload">
+            <button className="header__button">UPLOAD</button>
+        </Link>
+    );
+};
+
+export default UploadButton;

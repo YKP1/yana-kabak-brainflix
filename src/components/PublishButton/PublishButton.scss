@@ -1,0 +1,38 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
+
+.uploadhero__button {
+  align-items: center;
+  height: 2.25rem;
+  width: 17rem;
+  padding: 0.2rem 2rem;
+  border-radius: 0.25rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  background-image: url(/src/assets/Icons/upload.svg);
+  background-repeat: no-repeat;
+  border: none;
+  background-position: 0;
+  background-position-x: 0.5rem;
+  margin-left: 1.6rem;
+
+  @include tablet {
+    order: 2;
+    max-width: 8rem;
+    font-weight: 400;
+  }
+
+  &--publish {
+    color: $White;
+    background-color: $BrainFlix-Blue;
+    // margin: 0 1rem 0 1rem;
+  }
+
+  &--cancel {
+    color: $BrainFlix-Blue;
+    background-color: $White;
+    margin-top: 1rem;
+  }
+}

@@ -8,12 +8,34 @@
   flex-direction: column;
   border-top: 1px solid $Mercury;
 
-  h1 {
-    font-size: 1.8rem;
-    margin-left: 1.6rem;
-  }
-
   &__hero{
     margin: 0 1.5rem;
   }
+
+  h1 {
+    margin-left: 1.6rem;
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+
+  p{
+    margin-top: 0;
+    text-transform: uppercase;
+    color: #afafaf;
+    font-weight: 600;
+    line-height: 1.25rem;
+    font-size: 0.8125rem;
+  };
+
+  img{
+    border-radius: .25rem;
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+
+  input{
+    font-weight: 400;
+    width: 100%;
+  }
+
 }

@@ -4,7 +4,7 @@ import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 export default function UploadHero() {
   return (
     <div className="uploadhero">
-      <h1>Upload Page</h1>
+      <h1>Upload Video</h1>
       <br />
 
       <div className="uploadhero__hero">
@@ -21,7 +21,11 @@ export default function UploadHero() {
             TITLE YOUR VIDEO
           </label>
 
-          <input type="Add a title to your video" />
+          <input
+            type="text"
+            id="title"
+            placeholder="Add a title to your video"
+          />
 
           <label
             className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"
