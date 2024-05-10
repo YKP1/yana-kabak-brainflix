@@ -1,7 +1,8 @@
 import "./NextVideos.scss";
 import VideoThumbnail from "../VIdeoThumbnail/VideoThumbnail";
 
-export default function NextVideos({ otherVideos }) {
+function NextVideos({ setSelectedVideo, otherVideos }) {
+    
   return (
     <section className="videoslist">
       <p className="videoslist__header">Next Videos</p>
@@ -14,3 +15,5 @@ export default function NextVideos({ otherVideos }) {
     </section>
   );
 }
+
+export default NextVideos;

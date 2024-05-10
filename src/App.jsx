@@ -12,10 +12,6 @@ const apiKey = '?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46';
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // const otherVideos = ?.filter((el) => {
-  //   return el.id !== selectedVideo.id;
-  // });
-
   useEffect(() => {
     getVideos();
   }, []);
@@ -23,6 +19,11 @@ function App() {
   if (!selectedVideo ) {
     return <div className="loader">Shouldn't take tooooooo lo...</div>;
   }
+
+  const otherVideos = selectedVideo.filter((video) => {
+    return video.id !== selectedVideo.id;
+  });
+  console.log (otherVideos);
 
   return (
     <BrowserRouter>
@@ -33,8 +34,8 @@ function App() {
           element={
             <VideoPage
               selectedVideo={selectedVideo}
-              // setSelectedVideo={setSelectedVideo}
-              // otherVideos={otherVideos}
+              setSelectedVideo={setSelectedVideo}
+              otherVideos={otherVideos}
             />
           }
         />
@@ -48,9 +49,10 @@ function App() {
   );
 
   async function getVideos() {
-    const responsito = await axios.get(`${BASE_URL}/videos${apiKey}`);
-    setSelectedVideo(responsito.data);
+    const resp = await axios.get(`${BASE_URL}/videos${apiKey}`);
+    setSelectedVideo(resp.data);
   } 
+
 }
 
 export default App;
