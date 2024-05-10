@@ -6,13 +6,13 @@ import VideoPage from "./pages/VideoPage/VideoPage";
 import UploadPage from "./pages/UploadPage/UploadPage";
 import axios from "axios";
 
-const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com/";
+const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 const apiKey = '?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46';
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState(null);
 
-  // const otherVideos = videos.filter((el) => {
+  // const otherVideos = ?.filter((el) => {
   //   return el.id !== selectedVideo.id;
   // });
 
@@ -33,7 +33,7 @@ function App() {
           element={
             <VideoPage
               selectedVideo={selectedVideo}
-              setSelectedVideo={setSelectedVideo}
+              // setSelectedVideo={setSelectedVideo}
               // otherVideos={otherVideos}
             />
           }
@@ -48,7 +48,7 @@ function App() {
   );
 
   async function getVideos() {
-    const responsito = await axios.get(`${BASE_URL}videos${apiKey}`);
+    const responsito = await axios.get(`${BASE_URL}/videos${apiKey}`);
     setSelectedVideo(responsito.data);
   } 
 }

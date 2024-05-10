@@ -1,7 +1,7 @@
 import "./NextVideos.scss";
 import VideoThumbnail from "../VIdeoThumbnail/VideoThumbnail";
 
-export default function NextVideos({ otherVideos, setSelectedVideo }) {
+export default function NextVideos({ otherVideos }) {
   return (
     <section className="videoslist">
       <p className="videoslist__header">Next Videos</p>

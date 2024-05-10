@@ -1,8 +1,9 @@
 import "./Comments.scss";
 
 function Comments({ comments }) {
-  return (
-    <div className="rcomments" id={comments.id}>
+console.log(comments)
+  return(
+    <div className="rcomments">
       
       {comments.map((comment) => {
         const date = new Date(comment.timestamp);
