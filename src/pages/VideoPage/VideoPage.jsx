@@ -15,12 +15,6 @@ const VideoPage = ({ setSelectedVideo, selectedVideo, otherVideos }) => {
   const { id } = useParams();
   const [videoData, setVideoData] = useState(null);
 
-  //when I land on the page initially on home, i am at "/" but i still need to be able to fecth video details for that page - means first time everything loads i need to get the first video id
-  //then when the user clicks on the image from the list of video, they need to be sent to base_url/videos/id for that particular video id
-  //when user gets there - what's showing is what's come back from video data
-
-  // console.log(selectedVideo[0]);
-
   const firstVideo = selectedVideo[0].id;
 
   useEffect(() => {

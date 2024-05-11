@@ -1,8 +1,9 @@
 import "./VideoThumbnail.scss";
+import { Link } from 'react-router-dom';
 
 function VideoThumbnail({ video, setSelectedVideo }) {
   return (
-    <div
+    <Link
       key={video.id}
       onClick={() => setSelectedVideo(video)}
       className="videoslist__container"
@@ -12,7 +13,7 @@ function VideoThumbnail({ video, setSelectedVideo }) {
         <p className="videoslist__container--text__title">{video.title}</p>
         <p className="videoslist__container--text__channel">{video.channel}</p>
       </div>
-    </div>
+    </Link>
   );
 }
 

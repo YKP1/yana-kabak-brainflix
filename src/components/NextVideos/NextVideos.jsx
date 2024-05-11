@@ -2,6 +2,7 @@ import "./NextVideos.scss";
 import VideoThumbnail from "../VIdeoThumbnail/VideoThumbnail";
 
 function NextVideos({ setSelectedVideo, otherVideos }) {
+    console.log(otherVideos)
     
   return (
     <section className="videoslist">
