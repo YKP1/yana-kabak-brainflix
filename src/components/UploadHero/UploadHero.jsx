@@ -1,7 +1,26 @@
 import "./UploadHero.scss";
 import UploadImage from "../../assets/images/Upload-video-preview.jpg";
+import PublishButton from "../PublishButton/PublishButton";
 
 export default function UploadHero() {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const form = event.target;
+
+    const title = form.title.value;
+    // console.log ("TITLE YOUR VIDEO ", title);
+
+    const description = form.description.value;
+
+  if (!title || !description){
+    alert ("There are missing fields!");
+    return;
+  }
+
+  alert ("Good job! Submitted successfully!")
+  };
+
   return (
     <div className="uploadhero">
       <h1>Upload Video</h1>
@@ -13,33 +32,20 @@ export default function UploadHero() {
           <img src={UploadImage} alt="runner at a start point" />
         </div>
 
-        <form className="uploadhero__hero--parttwo">
-          <label
-            className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"
-            htmlFor="title"
-          >
-            TITLE YOUR VIDEO
+        <form onSubmit={handleSubmit} className="uploadhero__hero--parttwo">
+
+          <label className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"> TITLE YOUR VIDEO 
+          <input type="text" name="title" placeholder="Add a title to your video"/>
           </label>
 
-          <input
-            type="text"
-            id="title"
-            placeholder="Add a title to your video"
-          />
-
-          <label
-            className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"
-            htmlFor="description"
-          >
-            ADD A VIDEO DESCRIPTION
-          </label>
-
-          <textarea
-            className="uploadhero__hero--parttwo uploadhero__hero--parttwo__textarea"
-            id="description"
-            placeholder="Add a description to your video"
+          <label className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"> ADD A VIDEO DESCRIPTION
+          <textarea className="uploadhero__hero--parttwo uploadhero__hero--parttwo__textarea"
+            name="description" placeholder="Add a description to your video"
           ></textarea>
+          </label>
+          <PublishButton/>
         </form>
+
       </div>
     </div>
   );

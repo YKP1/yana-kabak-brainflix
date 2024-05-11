@@ -32,8 +32,6 @@ function App() {
     return video.id !== id;
   });
 
-  // console.log(otherVideos);
-
   return (
     <BrowserRouter>
       <Header />

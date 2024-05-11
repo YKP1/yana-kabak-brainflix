@@ -9,7 +9,7 @@ function NextVideos({ selectedVideo, otherVideos }) {
 
       <div className="videoslist__con">
         {otherVideos.map((video) => {
-          return <VideoThumbnail key={video.id} video={video} selectedVideo={selectedVideo} />;
+          return <VideoThumbnail key={video.id} video={video} selectedVideo={selectedVideo} otherVideos={otherVideos}/>;
         })}
       </div>
     </section>

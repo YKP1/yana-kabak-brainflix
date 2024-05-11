@@ -6,7 +6,6 @@ export default function UploadPage() {
   return (
     <>
       <UploadHero />
-      <PublishButton />
     </>
   );
 }

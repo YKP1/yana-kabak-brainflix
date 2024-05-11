@@ -14,6 +14,7 @@ const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
 const VideoPage = ({ selectedVideo, otherVideos }) => {
   const { id } = useParams();
   const [videoData, setVideoData] = useState(null);
+  
   const firstVideo = selectedVideo[0].id;
 
   useEffect(() => {
@@ -29,7 +30,7 @@ const VideoPage = ({ selectedVideo, otherVideos }) => {
     }
 
     getVideoData();
-  }, [id]);
+  }, []);
 
   if (!videoData) {
     return <div className="loader">wait for it...</div>;
