@@ -1,7 +1,7 @@
 import "./NextVideos.scss";
 import VideoThumbnail from "../VIdeoThumbnail/VideoThumbnail";
 
-function NextVideos({ setVideoData, otherVideos }) {
+function NextVideos({ selectedVideo, otherVideos }) {
 
   return (
     <section className="videoslist">
@@ -9,7 +9,7 @@ function NextVideos({ setVideoData, otherVideos }) {
 
       <div className="videoslist__con">
         {otherVideos.map((video) => {
-          return <VideoThumbnail key={video.id} video={video} setVideoData={setVideoData} />;
+          return <VideoThumbnail key={video.id} video={video} selectedVideo={selectedVideo} />;
         })}
       </div>
     </section>

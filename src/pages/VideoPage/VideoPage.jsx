@@ -29,7 +29,7 @@ const VideoPage = ({ selectedVideo, otherVideos }) => {
     }
 
     getVideoData();
-  }, []);
+  }, [id]);
 
   if (!videoData) {
     return <div className="loader">wait for it...</div>;
@@ -47,7 +47,7 @@ const VideoPage = ({ selectedVideo, otherVideos }) => {
         <div className="desktop__3">
           <NextVideos
             otherVideos={otherVideos}
-            setVideoData = {setVideoData}
+            selectedVideo = {selectedVideo}
           />
         </div>
       </div>
