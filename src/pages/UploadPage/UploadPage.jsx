@@ -1,4 +1,3 @@
-import "./UploadPage.scss";
 import UploadHero from "../../components/UploadHero/UploadHero";
 import PublishButton from "../../components/PublishButton/PublishButton";
 

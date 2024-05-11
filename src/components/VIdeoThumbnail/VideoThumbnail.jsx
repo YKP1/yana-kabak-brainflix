@@ -1,17 +1,13 @@
 import "./VideoThumbnail.scss";
 import { Link } from "react-router-dom";
-// import { useParams } from "react-router-dom";
 
 function VideoThumbnail({video}) {
 
-  // const { id } = useParams();
-  
-  return (
+    return (
     <>
-      {/* {video.map((video) => ( */}
         <Link
           key={video.id}
-          to={`/video/:${video.id}`}
+          to={`/video/${video.id}`}
           className="videoslist__container"
         >
           <img

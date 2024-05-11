@@ -1,8 +1,11 @@
 import "./UploadHero.scss";
 import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 import PublishButton from "../PublishButton/PublishButton";
+import { useNavigate } from "react-router-dom";
 
 export default function UploadHero() {
+  const navigate = useNavigate();
+
   const handleSubmit = (event) => {
     event.preventDefault();
 
@@ -17,8 +20,12 @@ export default function UploadHero() {
     return;
   }
 
-  alert ("Good job! Submitted successfully!")
+  alert ("Good job! Submitted successfully!");
+  
+  navigate("/");
+
   };
+
 
   return (
     <div className="uploadhero">

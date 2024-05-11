@@ -6,15 +6,14 @@ import { useState } from "react";
 const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 
 export default function VideoPlayer({video}) {
-
+  const [videoplayer, setVideoplayer] = useState(null);
+  
   const {id} = useParams();
 
   async function getVideos (){
     const {data} = await axios.get(`${BASE_URL}/videos${id || ids[0]}`);
-    setVideoplayer(data);
+    setVideoplayer(data.id);
   }
-
-  const [videoplayer, setVideoplayer] = useState(null);
 
   useEffect(() =>{
     getVideos();
