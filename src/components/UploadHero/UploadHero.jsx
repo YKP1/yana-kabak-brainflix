@@ -9,7 +9,6 @@ export default function UploadHero() {
     const form = event.target;
 
     const title = form.title.value;
-    // console.log ("TITLE YOUR VIDEO ", title);
 
     const description = form.description.value;
 
