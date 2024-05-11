@@ -32,7 +32,7 @@ function App() {
     return video.id !== id;
   });
 
-  console.log(otherVideos);
+  // console.log(otherVideos);
 
   return (
     <BrowserRouter>
