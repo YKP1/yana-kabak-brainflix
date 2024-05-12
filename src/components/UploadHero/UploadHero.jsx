@@ -34,7 +34,7 @@ export default function UploadHero() {
       <div className="uploadhero__hero">
         <div className="uploadhero__hero--partone">
           <p>VIDEO THUMBNAIL</p>
-          <img src={UploadImage} alt="runner at a start point" />
+          <img className = "uploadhero__image" src={UploadImage} alt="runner at a start point" />
         </div>
 
         <form onSubmit={handleSubmit} className="uploadhero__hero--parttwo">

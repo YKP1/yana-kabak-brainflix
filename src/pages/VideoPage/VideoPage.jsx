@@ -1,5 +1,4 @@
 import "./VideoPage.scss";
-import "../../App.scss";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Main from "../../components/Main/Main";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
