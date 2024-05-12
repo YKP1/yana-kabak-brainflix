@@ -3,7 +3,14 @@
 @use "../../styles/partials/mixin" as *;
 @use "../../styles/partials/colors" as *;
 
-.uploadhero__button {
+.upload{
+  @include tablet{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: baseline;
+  }
+
+&__button {
   align-items: center;
   height: 2.25rem;
   width: 17rem;
@@ -16,11 +23,17 @@
   border: none;
   background-position: 0;
   background-position-x: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include tablet {
     order: 2;
-    max-width: 8rem;
+    max-width: 10rem;
     font-weight: 400;
+  }
+
+  @include desktop{
   }
 
   &--publish {
@@ -33,5 +46,10 @@
     color: $BrainFlix-Blue;
     background-color: $White;
     margin-top: 1rem;
+
+    @include tablet{
+      margin-top:0;
+    }
   }
+}
 }

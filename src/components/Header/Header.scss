@@ -20,8 +20,8 @@
     justify-content: space-between;
   }
 
-  @include desktop{
-    padding: 1rem 7rem;
+  @include desktop {
+    padding: -5rem;
   }
 
   &__search {
@@ -86,7 +86,7 @@
     background-position-x: 0.5rem;
   }
 
-  .header__buttonlink{
+  .header__buttonlink {
     width: 16.5rem;
 
     @include tablet {

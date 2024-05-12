@@ -3,6 +3,7 @@ import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 import PublishButton from "../PublishButton/PublishButton";
 import { useNavigate } from "react-router-dom";
 
+
 export default function UploadHero() {
   const navigate = useNavigate();
 
@@ -15,17 +16,15 @@ export default function UploadHero() {
 
     const description = form.description.value;
 
-  if (!title || !description){
-    alert ("There are missing fields!");
-    return;
-  }
+    if (!title || !description) {
+      alert("There are missing fields!");
+      return;
+    }
 
-  alert ("Good job! Submitted successfully!");
-  
-  navigate("/");
+    alert("Good job! Submitted successfully!");
 
+    navigate("/");
   };
-
 
   return (
     <div className="uploadhero">
@@ -39,19 +38,25 @@ export default function UploadHero() {
         </div>
 
         <form onSubmit={handleSubmit} className="uploadhero__hero--parttwo">
-
-          <label className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"> TITLE YOUR VIDEO 
-          <input type="text" name="title" placeholder="Add a title to your video"/>
+          <label className="uploadhero__hero--title">
+            TITLE YOUR VIDEO
+            <input
+              type="text"
+              name="title"
+              placeholder="Add a title to your video"
+            />
           </label>
 
-          <label className="uploadhero__hero--parttwo uploadhero__hero--parttwo__label"> ADD A VIDEO DESCRIPTION
-          <textarea className="uploadhero__hero--parttwo uploadhero__hero--parttwo__textarea"
-            name="description" placeholder="Add a description to your video"
+          <label className="uploadhero__hero--descr">
+            ADD A VIDEO DESCRIPTION
+          </label>
+          <textarea
+            className="uploadhero__hero--parttwo__textarea"
+            name="description"
+            placeholder="Add a description to your video"
           ></textarea>
-          </label>
-          <PublishButton/>
+          <PublishButton />
         </form>
-
       </div>
     </div>
   );

@@ -1,4 +1,5 @@
 import "./VideoPage.scss";
+import "../../App.scss";
 import VideoPlayer from "../../components/VideoPlayer/VideoPlayer";
 import Main from "../../components/Main/Main";
 import CommentsForm from "../../components/CommentsForm/CommentsForm";
@@ -30,7 +31,7 @@ const VideoPage = ({ selectedVideo, otherVideos }) => {
     }
 
     getVideoData();
-  }, []);
+  }, [id]);
 
   if (!videoData) {
     return <div className="loader">wait for it...</div>;
@@ -48,8 +49,6 @@ const VideoPage = ({ selectedVideo, otherVideos }) => {
         <div className="desktop__3">
           <NextVideos
             otherVideos={otherVideos}
-            // selectedVideo = {selectedVideo}
-            // setSelectedVideo = {setSelectedVideo}
             setVideoData ={setVideoData}
           />
         </div>
