@@ -12,7 +12,7 @@ export default function VideoPlayer({video}) {
 
   async function getVideos (){
     const {data} = await axios.get(`${BASE_URL}/videos${id || ids[0]}`);
-    setVideoplayer(data.id);
+    setVideoplayer(data);
   }
 
   useEffect(() =>{

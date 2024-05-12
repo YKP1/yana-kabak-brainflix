@@ -1,7 +1,7 @@
 import "./Comments.scss";
 
 function Comments({ comments }) {
-// console.log(comments)
+
   return(
     <div className="rcomments">
       

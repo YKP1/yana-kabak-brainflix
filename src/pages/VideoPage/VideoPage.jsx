@@ -11,7 +11,7 @@ import { useParams } from "react-router-dom";
 const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
 const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
 
-const VideoPage = ({ setSelectedVideo, selectedVideo, otherVideos }) => {
+const VideoPage = ({ selectedVideo, otherVideos }) => {
   const { id } = useParams();
   const [videoData, setVideoData] = useState(null);
   
@@ -48,8 +48,9 @@ const VideoPage = ({ setSelectedVideo, selectedVideo, otherVideos }) => {
         <div className="desktop__3">
           <NextVideos
             otherVideos={otherVideos}
-            selectedVideo = {selectedVideo}
-            setSelectedVideo = {setSelectedVideo}
+            // selectedVideo = {selectedVideo}
+            // setSelectedVideo = {setSelectedVideo}
+            setVideoData ={setVideoData}
           />
         </div>
       </div>
