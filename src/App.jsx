@@ -28,10 +28,6 @@ function App() {
     return <div className="loader">Shouldn't take tooooooo lo...</div>;
   }
 
-  const otherVideos = selectedVideo.filter((video) => {
-    return video.id !== id;
-  });
-
   return (
     <BrowserRouter>
       <Header />
@@ -42,7 +38,6 @@ function App() {
             <VideoPage
               selectedVideo={selectedVideo}
               setSelectedVideo={setSelectedVideo}
-              otherVideos={otherVideos}
             />
           }
         />

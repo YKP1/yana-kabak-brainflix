@@ -1,0 +1,28 @@
+@use "../../styles/partials/typography" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixin" as *;
+@use "../../styles/partials/colors" as *;
+
+.header__button {
+    align-items: center;
+    height: 2.25rem;
+    width: 13rem;
+    padding: 0.2rem 2rem;
+    border-radius: 0.25rem;
+    font-weight: 700;
+    font-size: 0.75rem;
+    color: $White;
+    background-color: $BrainFlix-Blue;
+    background-image: url(/src/assets/Icons/upload.svg);
+    background-repeat: no-repeat;
+    width: 100%;
+    border: none;
+    background-position: 0;
+    background-position-x: 0.5rem;
+
+    @include tablet {
+      order: 2;
+      max-width: 8rem;
+      font-weight: 400;
+    }
+  }
