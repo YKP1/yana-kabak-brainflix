@@ -1,29 +1,40 @@
+import React, { useState } from "react";
 import "./UploadHero.scss";
 import UploadImage from "../../assets/images/Upload-video-preview.jpg";
 import PublishButton from "../PublishButton/PublishButton";
 import { useNavigate } from "react-router-dom";
-
+import axios from "axios";
 
 export default function UploadHero() {
+  const [isSuccess, setIsSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
 
     const form = event.target;
-
     const title = form.title.value;
+    const content = form.content.value;
 
-    const description = form.description.value;
-
-    if (!title || !description) {
+    if (!title || !content) {
       alert("There are missing fields!");
       return;
     }
 
-    alert("Good job! Submitted successfully!");
+    try {
+      await axios.post('http://localhost:8000/videos', {
+        title,
+        content
+      });
 
-    navigate("/");
+      setIsSuccess(true);
+      setErrorMessage("");
+      alert("Good job! Submitted successfully!");
+      navigate("/");
+    } catch (error) {
+      setErrorMessage(error.response.data);
+    }
   };
 
   return (
@@ -34,7 +45,7 @@ export default function UploadHero() {
       <div className="uploadhero__hero">
         <div className="uploadhero__hero--partone">
           <p>VIDEO THUMBNAIL</p>
-          <img className = "uploadhero__image" src={UploadImage} alt="runner at a start point" />
+          <img className="uploadhero__image" src={UploadImage} alt="runner at a start point" />
         </div>
 
         <form onSubmit={handleSubmit} className="uploadhero__hero--parttwo">
@@ -52,7 +63,7 @@ export default function UploadHero() {
           </label>
           <textarea
             className="uploadhero__hero--parttwo__textarea"
-            name="description"
+            name="content"
             placeholder="Add a description to your video"
           ></textarea>
           <PublishButton />

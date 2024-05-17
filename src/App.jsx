@@ -7,8 +7,8 @@ import UploadPage from "./pages/UploadPage/UploadPage";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
+const BASE_URL = "http://localhost:8000";
+// const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
 
 function App() {
   const [selectedVideo, setSelectedVideo] = useState([]);
@@ -16,7 +16,7 @@ function App() {
   const { id } = useParams();
 
   async function getVideos() {
-    const resp = await axios.get(`${BASE_URL}/videos${apiKey}`);
+    const resp = await axios.get(`${BASE_URL}/videos`);
     setSelectedVideo(resp.data);
   }
 

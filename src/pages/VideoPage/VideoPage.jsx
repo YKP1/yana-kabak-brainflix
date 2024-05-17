@@ -8,8 +8,8 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 
-const BASE_URL = "https://unit-3-project-api-0a5620414506.herokuapp.com";
-const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
+const BASE_URL = "http://localhost:8000";
+// const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
 
 const VideoPage = ({ selectedVideo }) => {
 
@@ -23,7 +23,7 @@ const VideoPage = ({ selectedVideo }) => {
     async function getVideoData() {
       try {
         const response = await axios.get(
-          `${BASE_URL}/videos/${id || firstVideo}${apiKey}`
+          `${BASE_URL}/videos/${id || firstVideo}`
         );
         setVideoData(response.data);
       } catch (error) {

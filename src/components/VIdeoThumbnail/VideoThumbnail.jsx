@@ -12,7 +12,7 @@ function VideoThumbnail({video}) {
         >
           <img
             className="videoslist__image"
-            src={video.image}
+            src={`http://localhost:8000/${video.image}`} 
             alt={video.title}
           />
           <div className="videoslist__container--text">
