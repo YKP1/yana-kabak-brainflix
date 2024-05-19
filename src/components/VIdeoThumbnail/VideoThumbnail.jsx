@@ -9,6 +9,7 @@ function VideoThumbnail({video}) {
           key={video.id}
           to={`/video/${video.id}`}
           className="videoslist__container"
+          onClick={() => window.scrollTo(0, 0)}
         >
           <img
             className="videoslist__image"

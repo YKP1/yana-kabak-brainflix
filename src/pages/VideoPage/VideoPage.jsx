@@ -9,37 +9,49 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 const BASE_URL = "http://localhost:8000";
-// const apiKey = "?api_key=cec6b186-c74d-452f-bf87-1bbc245ccb46";
 
-const VideoPage = ({ selectedVideo }) => {
-
-  
+const VideoPage = () => {
   const { id } = useParams();
+  const [selectedVideo, setSelectedVideo] = useState([]);
   const [videoData, setVideoData] = useState(null);
   
-  const firstVideo = selectedVideo[0].id;
 
   useEffect(() => {
-    async function getVideoData() {
+    async function getVideos() {
+      try {
+        const resp = await axios.get(`${BASE_URL}/videos`);
+        setSelectedVideo(resp.data);
+      } catch (error) {
+        console.error("Error fetching videos:", error);
+      }
+    }
+
+    getVideos();
+  }, []);
+  
+  useEffect(() => {
+    async function getVideoData(videoId) {
       try {
         const response = await axios.get(
-          `${BASE_URL}/videos/${id || firstVideo}`
+          `${BASE_URL}/videos/${videoId}`
         );
         setVideoData(response.data);
       } catch (error) {
         console.error("Error fetching video data:", error);
       }
     }
+    if (selectedVideo.length > 0) {
+      const videoId = id || selectedVideo[0].id;
+      getVideoData(videoId);
+    }
+  }, [id, selectedVideo]);
 
-    getVideoData();
-  }, [id]);
-
-  if (!videoData) {
+  if (!selectedVideo.length || !videoData) {
     return <div className="loader">wait for it...</div>;
   }
 
   const otherVideos = selectedVideo.filter((video) => {
-    return video.id !== id;
+    return video.id !== (id || selectedVideo[0].id);
   });
 
   return (
@@ -54,7 +66,6 @@ const VideoPage = ({ selectedVideo }) => {
         <div className="desktop__3">
           <NextVideos
             otherVideos={otherVideos}
-            setVideoData ={setVideoData}
           />
         </div>
       </div>

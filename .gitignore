@@ -25,6 +25,5 @@ dist-ssr
 
 .vite.config.js
 README.md
-index.html
 .eslintrc.cjs
 /src/assets/index.css
