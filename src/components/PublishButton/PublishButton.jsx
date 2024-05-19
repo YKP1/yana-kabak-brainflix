@@ -1,11 +1,11 @@
 import React from "react";
 import "./PublishButton.scss";
 
-const PublishButton = () => {
+const PublishButton = ({onCancel}) => {
   return (
     <div className = "upload">
-      <button className="upload__button upload__button--publish">PUBLISH</button>
-      <button className="upload__button upload__button--cancel"> CANCEL</button>
+      <button type = "submit" className="upload__button upload__button--publish">PUBLISH</button>
+      <button type = "button" className="upload__button upload__button--cancel" onClick = {onCancel}> CANCEL</button>
     </div>
   );
 };

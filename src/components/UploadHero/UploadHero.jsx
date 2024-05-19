@@ -17,7 +17,7 @@ export default function UploadHero() {
     const title = form.title.value;
     const content = form.content.value;
     const timestamp = Date.now();
-    const image = `http://localhost:8000/images/obama.jpg`;
+    const video = "http://localhost:8000/images/obama.jpg";
 
     if (!title || !content) {
       alert("There are missing fields!");
@@ -28,7 +28,7 @@ export default function UploadHero() {
       await axios.post('http://localhost:8000/videos', {
         title,
         content,
-        image,
+        video,
         timestamp
       });
 
@@ -39,6 +39,10 @@ export default function UploadHero() {
     } catch (error) {
       setErrorMessage(error.response.data);
     }
+  };
+
+  const handleCancel = () => {
+    navigate("/");
   };
 
   return (
@@ -70,7 +74,7 @@ export default function UploadHero() {
             name="content"
             placeholder="Add a description to your video"
           ></textarea>
-          <PublishButton />
+          <PublishButton onCancel={handleCancel} />
         </form>
       </div>
     </div>
