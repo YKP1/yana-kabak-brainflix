@@ -16,6 +16,8 @@ export default function UploadHero() {
     const form = event.target;
     const title = form.title.value;
     const content = form.content.value;
+    const timestamp = Date.now();
+    const image = `http://localhost:8000/images/obama.jpg`;
 
     if (!title || !content) {
       alert("There are missing fields!");
@@ -25,7 +27,9 @@ export default function UploadHero() {
     try {
       await axios.post('http://localhost:8000/videos', {
         title,
-        content
+        content,
+        image,
+        timestamp
       });
 
       setIsSuccess(true);
